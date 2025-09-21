@@ -1,0 +1,106 @@
+# .cursorrules - SecurityDebt.ai Mock POC
+- path: /settings
+component: SettingsPage
+
+
+# Components to generate
+components:
+- DebtScoreCard
+- FinancialSummaryCard
+- InventoryTable
+- ToolDetailFlyout
+- OverlapForceGraph
+- RecommendationCard
+- PlaybookStep
+- ExecutiveReportPreview
+- PersonaSwitcher
+- ActivityFeed
+- BenchmarksPanel
+
+
+# Mock data seeds (files to create)
+mock_data:
+- file: mock-data/company.json
+description: Company profile and budget
+- file: mock-data/tools_enterprise.json
+description: Seeded 75+ tools enterprise dataset
+- file: mock-data/tools_midmarket.json
+- file: mock-data/tools_startup.json
+- file: mock-data/owners.json
+- file: mock-data/recommendations.json
+
+
+# Mock service API (client-side)
+mock_api:
+- name: mockService
+functions:
+- getDashboard()
+- getInventory({page, pageSize, filters})
+- getToolById(id)
+- getRecommendations()
+- createPlaybookFromRecommendation(recoId)
+- exportReport(type)
+
+
+# Storybook
+storybook:
+generateStoriesFor: [DebtScoreCard, InventoryTable, OverlapForceGraph, RecommendationCard, PlaybookPage, ExecutiveReportPreview]
+
+
+# Tests
+tests:
+- path: src/components/DebtScoreCard.test.jsx
+description: "Renders score, trend and breakdown correctly from mock data"
+
+
+# Scripts
+scripts:
+- name: dev
+cmd: npm run dev
+- name: storybook
+cmd: npm run storybook
+- name: test
+cmd: npm run test
+
+
+# Demo behaviors
+demo:
+- openTo: /
+- autoTour:
+steps:
+- title: "Overview"
+selector: "#debt-score-card"
+description: "Shows composite Security Debt score and trend"
+- title: "Inventory"
+selector: "#nav-inventory"
+- title: "Recommendations"
+selector: "#nav-recommendations"
+- title: "Playbook"
+selector: "#first-playbook-cta"
+- personaSwitch:
+startPersona: enterprise
+personaOptions: [enterprise, midmarket, startup]
+
+
+# Exports
+exports:
+- type: pdf
+sample: mock-exports/executive-summary.pdf
+- type: csv
+sample: mock-exports/recommendations.csv
+
+
+# Deliverables
+deliverables:
+- README.md (how to run, change demo dataset)
+- mock-data/
+- src/ (react app)
+- storybook/
+- tests/
+- demo-script.md
+
+
+# Notes
+notes: |
+- No authentication required in demo 
+- mock-data is in mock-data/

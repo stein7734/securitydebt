@@ -1,0 +1,41 @@
+{
+  "startup": {
+    "name": "TechFlow Inc.",
+    "annual_revenue": 5000000,
+    "security_budget_pct": 0.08,
+    "number_of_cloud_accounts": 3,
+    "employee_count": 45,
+    "industry": "SaaS",
+    "compliance_requirements": ["SOC2"],
+    "security_team_size": 2,
+    "annual_security_spend": 400000,
+    "estimated_waste": 120000,
+    "debt_score": 72
+  },
+  "midmarket": {
+    "name": "DataVault Solutions",
+    "annual_revenue": 25000000,
+    "security_budget_pct": 0.12,
+    "number_of_cloud_accounts": 8,
+    "employee_count": 180,
+    "industry": "Financial Services",
+    "compliance_requirements": ["SOC2", "PCI-DSS", "GDPR"],
+    "security_team_size": 8,
+    "annual_security_spend": 3000000,
+    "estimated_waste": 750000,
+    "debt_score": 58
+  },
+  "enterprise": {
+    "name": "GlobalCorp Industries",
+    "annual_revenue": 500000000,
+    "security_budget_pct": 0.15,
+    "number_of_cloud_accounts": 45,
+    "employee_count": 2500,
+    "industry": "Manufacturing",
+    "compliance_requirements": ["SOC2", "ISO27001", "NIST", "GDPR", "CCPA"],
+    "security_team_size": 45,
+    "annual_security_spend": 75000000,
+    "estimated_waste": 15000000,
+    "debt_score": 41
+  }
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "owner-001",
+    "name": "Sarah Chen",
+    "email": "sarah.chen@company.com",
+    "role": "CISO",
+    "department": "Security",
+    "tools_owned": ["cspm-001", "siem-001", "edr-001"],
+    "budget_responsibility": 2500000
+  },
+  {
+    "id": "owner-002",
+    "name": "Michael Rodriguez",
+    "email": "michael.rodriguez@company.com",
+    "role": "Security Architect",
+    "department": "Security",
+    "tools_owned": ["cspm-002", "siem-002"],
+    "budget_responsibility": 500000
+  },
+  {
+    "id": "owner-003",
+    "name": "Jennifer Kim",
+    "email": "jennifer.kim@company.com",
+    "role": "Identity Manager",
+    "department": "IT",
+    "tools_owned": ["iam-001", "iam-002"],
+    "budget_responsibility": 300000
+  },
+  {
+    "id": "owner-004",
+    "name": "David Thompson",
+    "email": "david.thompson@company.com",
+    "role": "DevSecOps Lead",
+    "department": "Engineering",
+    "tools_owned": ["sca-001", "sca-002"],
+    "budget_responsibility": 250000
+  },
+  {
+    "id": "owner-005",
+    "name": "Lisa Wang",
+    "email": "lisa.wang@company.com",
+    "role": "Security Operations Manager",
+    "department": "Security",
+    "tools_owned": ["edr-002"],
+    "budget_responsibility": 200000
+  }
+]

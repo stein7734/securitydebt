@@ -1,0 +1,95 @@
+{
+    "dashboards": [
+      {
+        "id": "spend_breakdown",
+        "title": "Annual Security Spend Breakdown",
+        "type": "pie",
+        "data_source": "tools_enterprise.json",
+        "mapping": {
+          "label": "name",
+          "value": "annual_cost_eur"
+        },
+        "options": {
+          "show_percent": true,
+          "currency": "EUR",
+          "legend": true
+        }
+      },
+      {
+        "id": "license_utilization",
+        "title": "License Utilization per Tool",
+        "type": "bar",
+        "data_source": "tools_enterprise.json",
+        "mapping": {
+          "x": "name",
+          "y": "utilization_pct"
+        },
+        "options": {
+          "y_axis_label": "Utilization (%)",
+          "thresholds": {
+            "low": 60,
+            "medium": 80,
+            "high": 95
+          }
+        }
+      },
+      {
+        "id": "redundancy_matrix",
+        "title": "Tool Overlap Matrix",
+        "type": "matrix",
+        "data_source": "tools_enterprise.json",
+        "mapping": {
+          "primary": "name",
+          "overlap": "overlap_with"
+        },
+        "options": {
+          "show_connections": true,
+          "highlight_redundancies": true
+        }
+      },
+      {
+        "id": "wasted_spend",
+        "title": "Estimated Wasted Spend",
+        "type": "metric_card",
+        "data_source": "tools_enterprise.json",
+        "calculation": {
+          "formula": "(1 - utilization_pct/100) * annual_cost_eur",
+          "aggregate": "sum"
+        },
+        "options": {
+          "currency": "EUR",
+          "highlight_color": "red"
+        }
+      },
+      {
+        "id": "savings_opportunities",
+        "title": "Potential Savings by Vendor Consolidation",
+        "type": "stacked_bar",
+        "data_source": "tools_enterprise.json",
+        "mapping": {
+          "x": "vendor",
+          "y": "annual_cost_eur",
+          "stack": "category"
+        },
+        "options": {
+          "show_total": true,
+          "currency": "EUR"
+        }
+      },
+      {
+        "id": "category_spend_trend",
+        "title": "Spend by Category (Forecast View)",
+        "type": "line",
+        "data_source": "tools_enterprise.json",
+        "mapping": {
+          "x": "category",
+          "y": "annual_cost_eur"
+        },
+        "options": {
+          "forecast": true,
+          "timeframe": ["2023", "2024", "2025"]
+        }
+      }
+    ]
+  }
+  
