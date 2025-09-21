@@ -6,6 +6,8 @@ A polished, single-page web application prototype that visualizes a full end-to-
 
 **View the live application:** [https://stein7734.github.io/securitydebt/](https://stein7734.github.io/securitydebt/)
 
+> **Note**: If the GitHub Pages deployment is still in progress, you can also deploy using Vercel or Netlify (see Deployment Options below).
+
 ## 🚀 Quick Start
 
 1. **Install dependencies:**
@@ -195,6 +197,33 @@ The application is optimized for:
 - Firefox 88+
 - Safari 14+
 - Edge 90+
+
+## 🚀 Deployment Options
+
+### Option 1: GitHub Pages (Current)
+- **Status**: Automated via GitHub Actions
+- **URL**: [https://stein7734.github.io/securitydebt/](https://stein7734.github.io/securitydebt/)
+- **Check Status**: [Actions tab](https://github.com/stein7734/securitydebt/actions)
+
+### Option 2: Vercel (Recommended)
+1. Go to [vercel.com](https://vercel.com)
+2. Sign in with GitHub
+3. Import repository: `stein7734/securitydebt`
+4. Deploy automatically
+
+### Option 3: Netlify
+1. Go to [netlify.com](https://netlify.com)
+2. Connect GitHub repository
+3. Build settings: `npm run build`, Publish directory: `dist`
+
+### Option 4: Manual Deploy
+```bash
+# Build the project
+npm run build
+
+# Deploy the 'dist' folder contents to any static hosting
+./deploy.sh
+```
 
 ## 🤝 Contributing
 
