@@ -2,6 +2,10 @@
 
 A polished, single-page web application prototype that visualizes a full end-to-end workflow for an AI-driven Security Debt (FinSecOps) product. This demo showcases enterprise-grade security tool management, optimization recommendations, and financial impact analysis.
 
+## 🌐 Live Demo
+
+**View the live application:** [https://stein7734.github.io/securitydebt/](https://stein7734.github.io/securitydebt/)
+
 ## 🚀 Quick Start
 
 1. **Install dependencies:**
